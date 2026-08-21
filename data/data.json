@@ -1,5 +1,5 @@
 {
-  zehra:{
+  "zehra":{
     "name": "Zehra",
     "age": 15,
     "education_level": "10. Sınıf",
@@ -13,7 +13,7 @@
       "HTML",
       "CSS"
     ]
-  }
+  },
 "kubra":{
   "name": "Kübra",
   "age": 15,
@@ -24,7 +24,7 @@
   ],
   "field": "Yazılım",
   "skills": [
-    "Phyton",
+    "Pyhton",
     "Raspberry Pi",
     "HTML",
     "DroneKit"
