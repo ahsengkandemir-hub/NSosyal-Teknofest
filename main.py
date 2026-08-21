@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def durum():
-  return render_template('deneme.html')
+  return render_template('app.html')
 
 @app.route('data.json')
 def data_json():
