@@ -14,3 +14,20 @@
       "CSS"
     ]
   }
+"kubra":{
+  "name": "Kübra",
+  "age": 15,
+  "education_level": "9.sınıf",
+  "city": "Ankara",
+  "awards": [
+    "Liseler Arası İHA Sabit Görev 2026 1.lik"
+  ],
+  "field": "Yazılım",
+  "skills": [
+    "Phyton",
+    "Raspberry Pi",
+    "HTML",
+    "DroneKit"
+  ]
+}
+}
