@@ -1,0 +1,16 @@
+{
+  zehra:{
+    "name": "Zehra",
+    "age": 15,
+    "education_level": "10. Sınıf",
+    "city": "Ankara",
+    "field": "Yazılım",
+    "awards": [
+      "Liseler Arası İHA 2026 Serbest Görev 1.lik" 
+    ],
+    "skills": [
+      "Python",
+      "HTML",
+      "CSS"
+    ]
+  }
