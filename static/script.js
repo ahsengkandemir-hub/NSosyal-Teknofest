@@ -29,3 +29,21 @@ basvurutalepleriBtn.addEventListener("click", function(){
           <span class="t-label">Name</span>
           <span class="t-value">${kullanici.name}</span>
          </div>
+
+         <div class="t-detail-item">
+          <span class="t-label">Yaş</span>
+          <span class="t-value">${kullanici.age]</span>
+         </div>
+
+         <div class="t-detail-item">
+           <span class="t-label">Şehir</span>
+           <span class="t-value"${kullanici.city</span>
+         </div>
+
+         <div class="t-detail-item"
+          <span class="t-label">Eğitim</span>
+          <span class="t-value"${kullanici.education_level}</span>
+         </div>
+         
+          
+          
