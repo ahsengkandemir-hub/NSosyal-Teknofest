@@ -31,3 +31,11 @@
   ]
         }
 }
+
+
+{
+  "giris":{
+    "name": "ornekmail@gmail.com",
+    "password": "sifre123"
+          }
+}     
