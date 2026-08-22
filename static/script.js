@@ -8,6 +8,7 @@ basvurutalepleriBtn.addEventListener("click", function(){
 
       kullanicilar.forEach(function(kullanici) {
         const kart = document.createElement("div");
+        kart.setAttribute("data-alan", kullanici.field);
         kart.innerHTML = `
        <div class="ticekt-canvas">
     <div classs="ticket-wrapper">
