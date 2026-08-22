@@ -29,14 +29,3 @@ basvurutalepleriBtn.addEventListener("click", function(){
           <span class="t-label">Name</span>
           <span class="t-value">${kullanici.name}</span>
          </div>
-
-         
-        
-      
-      
-      
-    
-        
-        
-
-    
