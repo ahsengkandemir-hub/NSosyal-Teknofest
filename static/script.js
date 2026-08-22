@@ -45,6 +45,9 @@ basvurutalepleriBtn.addEventListener("click", function(){
           <span class="t-label">Eğitim</span>
           <span class="t-value"${kullanici.education_level}</span>
          </div>
+
+const form=
+getElementById("index form"):
          
           
           
