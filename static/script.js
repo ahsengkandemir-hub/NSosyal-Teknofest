@@ -1,3 +1,19 @@
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const gir = document.getElementById("gir");
+gir.addEventListener("click", function() {
+  fetch("data.json")
+        .then(response => response.json())
+        .then(data => {
+    if (data.giris.name === email.value && data.giris.password === password.value) {
+      alert("Giriş Başarılı!");
+      window.location.href = "/deneme";
+    } else {
+      alert("Giriş Başarısız!");
+    }
+  });
+});
+
 const basvurutalepleriBtn = document.getElementById("basvurutalepleriBtn");
 
 basvurutalepleriBtn.addEventListener("click", function(){
@@ -72,13 +88,6 @@ basvurutalepleriBtn.addEventListener("click", function(){
                `;
                 document.getElementByld("kartlar").appendChild(kart)
                   });
-                  /*document.querySelector(".name").textContent=kullanici.name;
-                  document.querySelector(".age").textContent=kullanici.age;
-                  document.querySelector(".city").textContent=kullanici.city;
-                  document.querySelector(".field").textContent=kullanici.field;
-                  document.querySelector(".education_level").textContent=kullanici.education_level;
-                  document.querySelector("skills").textContent=kullanici.skills.join(",");
-                  document.querySelector(."awards").textContent=kullanici.awards.join(",");*/
           })
           .catch(error => console.error("Error fetching data:",error));
 });
