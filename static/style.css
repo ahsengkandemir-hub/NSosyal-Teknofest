@@ -184,6 +184,72 @@
     color: var(--t-text-main);
 }
 
-    
-    
+.t-perforation {
+  display: flex;
+  justify-content: space-between;
+  height: 1em;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
 
+.t-perf-line {
+  flex-grow: 1;
+  height: 0;
+
+  border-top: 2px dashed rgba(255, 255, 255, 0.2);
+
+  margin: 0 1.5em;
+}
+
+.t-stub {
+  padding: 2em;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      transparent 1em,
+      var(--t-bg-light) 1.05em
+    ),
+    radial-gradient(
+      circle at top right,
+      transparent 1em,
+      var(--t-bg-light) 1.05em
+    );
+
+  background-size: 51% 100%;
+  background-position:
+    top left,
+    top right;
+
+  background-repeat: no-repeat;
+
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+}
+
+
+.t-admit {
+  text-align: right;
+}
+
+.t-admit-text {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--t-text-muted);
+}
+
+.t-admit-num {
+  font-size: 3em;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--t-accent);
+  text-shadow: 0 0 15px var(--t-accent-glow);
+}
