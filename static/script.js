@@ -37,7 +37,7 @@ basvurutalepleriBtn.addEventListener("click", function(){
          </div>
 
          <div class="t-detail-item">
-           <span class="t-label">Şehir</span>
+           <span class="t-l}</spanabel">Şehir</span>
            <span class="t-value"${kullanici.city</span>
          </div>
 
@@ -46,8 +46,46 @@ basvurutalepleriBtn.addEventListener("click", function(){
           <span class="t-value"${kullanici.education_level}</span>
          </div>
 
-const form=
-getElementById("index form"):
+         <div class="t-detail-item"
+          <span class="t-label">Alan</span>
+          <span class="t-value"${kullanici.field}</span>
+         </div>
+
+         <div class="t-detail-item"
+          <span class="t-label">Ödüller</span>
+          <span class="t-value"${kullanici.awards.join(",")}</span>
+         </div>
+
+         <div class="t-detail-item">
+          <span class="t-label">Beceriler</span>
+          <span class="t-value"${kullanici.skills.join(",")}
+         </div>
+
+        </div>
+       </div>
+
+       <div class="t-perforation">
+        <div class="t-perf-line></div>
+       </div>
+     </div>
+     <button class="calisma-talep-btn">Çalışma Talep Et</button>
+               `;
+                document.getElementByld("kartlar").appendChild(kart)
+                  });
+                  /*document.querySelector(".name").textContent=kullanici.name;
+                  document.querySelector(".age").textContent=kullanici.age;
+                  document.querySelector(".city").textContent=kullanici.city;
+                  document.querySelector(".field").textContent=kullanici.field;
+                  document.querySelector(".education_level").textContent=kullanici.education_level;
+                  document.querySelector("skills").textContent=kullanici.skills.join(",");
+                  document.querySelector(."awards").textContent=kullanici.awards.join(",");*/
+          })
+          .catch(error => console.error("Error fetching data:",error));
+});
+       
+
+         
+
          
           
           
