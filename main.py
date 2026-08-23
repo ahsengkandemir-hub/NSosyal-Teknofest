@@ -4,8 +4,12 @@ import json
 app = Flask(__name__)
 
 @app.route('/')
+def giris():
+  return render_template('giris.html')
+
+@app.route('/deneme')
 def durum():
-  return render_template('app.html')
+  return render template('app.html')
 
 @app.route('data.json')
 def data_json():
