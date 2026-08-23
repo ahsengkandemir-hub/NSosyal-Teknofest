@@ -125,6 +125,115 @@ data-alan="Mekanik">
 </div>
 </div>
 </div>
+<p class="text-xs text-neutral-400 mb-3" >Mühendislik / Robotik</p>
+<p class="text-sm text-neutral-300 mb-4">Projemiz için mekanik tasarım ve üretim konusunda deneyimli ekip arkadaşı arıyoruz.</p>
+<p class="text-xs text-neutral-400 mb-4">Aranan Beceriler: <span class="text-white font-medium">SolidWorks, CAD, 3D Tasarım</span></p> <div class="flex justify-between items-center pt-3 border-t border-neutral-800 text-xs text-neutral-400">
+<span>2/4 kişi</span>
+<div class="flex items-center gap-3">
+<button onclick="this.classList.toggle('text-blue-500'); this.classList.toggle('text-neutral-400')" class="text-neutral-400 hover:text-blue-400 p-1">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M13.13 2.21 12 1l-1.13 1.21C7.23 6.13 6 8.87 6 12v3l-2 2v1h16v-1l-2-2v-3c0-3.13-1.23-5.87-4.87-9.79zM12 13.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0 8.5c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z"/></svg>
+</button>
+<button onclick="this.innerText='Başvuruldu'; this.style.backgroundColor='green'; this.disabled=true;" class="bg-white text-black px-4 py-1.5 rounded-lg font-bold">Başvur</button>
+</div>
+</div> </div>
+</div>
+<div id="basvurularim" class="hidden space-y-4">
+<div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 text-center text-neutral-500 text-xs">
+Yayınladığım başvurular ve gelen başvurular burada listelenecek.
+</div>
+</div>
+<div id="basvuruTalepleri" class="hidden space-y-4">
+<div id="kartlar">
+
+</div>
+</div>
+
+<div id="favorilerim" class="hidden space-y-4">
+<div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 text-center text-neutral-500 text-xs">
+Favoriye eklediğiniz başvurular burada listelenecek.
+</div>
+</div>
+
+</div>
+<script>
+function sayfaAc(sayfaId, baslik) {
+document.getElementById('anaSayfa').classList.add('hidden');
+document.getElementById('basvurularim').classList.add('hidden');
+
+document.getElementById('basvuruTalepleri').classList.add('hidden');
+document.getElementById('favorilerim').classList.add('hidden');
+
+document.getElementById(sayfaId).classList.remove('hidden');
+document.getElementById('sayfaBaslik').innerText = baslik;
+document.getElementById('menu').classList.add('hidden');
+
+}
+
+function filtreuygulama() {
+const sectigimfilteler = document.querySelectorAll(
+'.filtrealanlari.bg-green-500');
+
+const anasayfailanlari = document.querySelectorAll(
+'#anaSayfa [data-alan]');
+
+const basvurutalepleri = document.querySelectorAll(
+'#kartlar [data-alan]');
+
+if (sectigimfilteler.length == 0) {
+anasayfailanlari.forEach(function(ilan) {
+ilan.classList.remove('hidden');
+});
+basvurutalepleri.forEach(function(kart) {
+kart.classList.remove('hidden');
+});
+}
+
+else {
+anasayfailanlari.forEach(function(ilan) { const ilanalani = ilan.getAttribute('data-alan');
+let goster = false;
+sectigimfilteler.forEach(function(filtre) {const filtrealani = filtre.getAttribute('data-alan');
+if (ilanalani == filtrealani) {
+goster = true;
+}
+});
+
+if (goster) {
+ilan.classList.remove('hidden');
+} else {
+ilan.classList.add('hidden');
+}
+
+});
+
+basvurutalepleri.forEach(function(kart) {
+const kartalani = kart.getAttribute('data-alan');
+let goster = false;
+
+sectigimfilteler.forEach(function(filtre) {
+const filtrealani = filtre.getAttribute('data-alan');
+if (kartalani == filtrealani) {
+goster = true;
+}
+
+});
+
+if (goster) {
+kart.classList.remove('hidden');
+} else {
+kart.classList.add('hidden');
+}
+
+});
+
+}
+
+document.getElementById('filtreler').classList.add('hidden');
+}
+</script>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
+
 
 
            
