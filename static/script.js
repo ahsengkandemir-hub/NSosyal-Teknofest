@@ -7,7 +7,7 @@ gir.addEventListener("click", function() {
         .then(data => {
     if (data.giris.name === email.value && data.giris.password === password.value) {
       alert("Giriş Başarılı!");
-      window.location.href = "/deneme";
+      window.location.href = "/app";
     } else {
       alert("Giriş Başarısız!");
     }
