@@ -144,41 +144,31 @@ Yayınladığım başvurular ve gelen başvurular burada listelenecek.
 </div>
 <div id="basvuruTalepleri" class="hidden space-y-4">
 <div id="kartlar">
-
 </div>
 </div>
-
 <div id="favorilerim" class="hidden space-y-4">
 <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 text-center text-neutral-500 text-xs">
 Favoriye eklediğiniz başvurular burada listelenecek.
 </div>
 </div>
-
 </div>
 <script>
 function sayfaAc(sayfaId, baslik) {
 document.getElementById('anaSayfa').classList.add('hidden');
 document.getElementById('basvurularim').classList.add('hidden');
-
 document.getElementById('basvuruTalepleri').classList.add('hidden');
 document.getElementById('favorilerim').classList.add('hidden');
-
 document.getElementById(sayfaId).classList.remove('hidden');
 document.getElementById('sayfaBaslik').innerText = baslik;
 document.getElementById('menu').classList.add('hidden');
-
 }
-
 function filtreuygulama() {
 const sectigimfilteler = document.querySelectorAll(
 '.filtrealanlari.bg-green-500');
-
 const anasayfailanlari = document.querySelectorAll(
 '#anaSayfa [data-alan]');
-
 const basvurutalepleri = document.querySelectorAll(
 '#kartlar [data-alan]');
-
 if (sectigimfilteler.length == 0) {
 anasayfailanlari.forEach(function(ilan) {
 ilan.classList.remove('hidden');
@@ -187,7 +177,6 @@ basvurutalepleri.forEach(function(kart) {
 kart.classList.remove('hidden');
 });
 }
-
 else {
 anasayfailanlari.forEach(function(ilan) { const ilanalani = ilan.getAttribute('data-alan');
 let goster = false;
@@ -196,39 +185,29 @@ if (ilanalani == filtrealani) {
 goster = true;
 }
 });
-
 if (goster) {
 ilan.classList.remove('hidden');
 } else {
 ilan.classList.add('hidden');
 }
-
 });
-
 basvurutalepleri.forEach(function(kart) {
 const kartalani = kart.getAttribute('data-alan');
 let goster = false;
-
 sectigimfilteler.forEach(function(filtre) {
 const filtrealani = filtre.getAttribute('data-alan');
 if (kartalani == filtrealani) {
 goster = true;
 }
-
 });
-
 if (goster) {
 kart.classList.remove('hidden');
 } else {
 kart.classList.add('hidden');
 }
-
 });
-
 }
-
-document.getElementById('filtreler').classList.add('hidden');
-}
+document.getElementById('filtreler').classList.add('hidden');}
 </script>
 <script src="{{url_for('static', filename='script.js')}}"></script>
 </body>
