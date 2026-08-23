@@ -39,3 +39,17 @@
     "password": "sifre123"
           }
 }     
+{
+  "aisenur":{
+    "name": "Aişe Nur",
+    "age": 16,
+    "education_level": "11. Sınıf",
+    "city": "Ankara",
+    "field": "Elektronik",
+    "awards": [
+      "Liseler Arası İHA 2026 Serbest Görev 1.lik" 
+    ],
+    "skills": [
+      "Altium",
+      "STM32",
+      "LoRa"
