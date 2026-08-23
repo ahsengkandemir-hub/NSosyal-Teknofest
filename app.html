@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=tr>
+<html lang="tr">
 <head>
   <meta charset='UTF-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,72 @@
        </svg>
     </button>
     <div id="menu" class="hidden absolute top-14 right-0 w-48 bg-neutral-900 border border-neutral-800 rounded-2xl shasow-x1 p-2 z-20 space-y-1">
-      
+      <button onclick="sayfaAc('anaSayfa','NSosyal')" class="w-full text-left px-3 py-2 text-xs text-neutral-300 hover:bg-neutral-800 rounded-xl">Ana Sayfa</button>
+      <button id="basvurularimBtn" onclick="sayfaAc('basvurularim','Başvurularım')" class="w-full text-left px-3 py-2 text-xs text-neutral-300 hover:bg-neutral-800 rounded-xl">Başvurularım</button>
+      <button id="basvuruTalepleriBtn" onclick="sayfaAc('basvuruTalepleri','Başvuru Talepleri')" class="w-full text-left px-3 py-2 text-xs text-neutral-300 hover:bg-neutral-800 rounded-xl">Başvuru Talepleri</button>
+      <button id="favorilerimBtn" onclick="sayfaAc('favorilerim','Favorilerim')" class=w-full text-left px-3 py-2 text-xs text-neutral-300 hover:bg-neutral-800 rounded-xl">Favorilerim</button>      
+    </div>
+  </div>
+    <button 
+      onclick="document.getElementById('filtreler').classList.toggle('hidden')"
+      class="w-full bg-neutral-900 border border-neutral-800 text-white py-3 rounded-2x1 text-xs font-bold" >
+      filtrele
+    </button>
+
+    <div id="filtreler"
+    class="hidden bg-neutral-900 border border-neutral-800 rounded-2x1 p-3 mt-2 sapce-y-2">
+
+    <button onclick="this.classList.toggle('bg-green-500')"
+      data-alan="Yazılım"
+      class="filtrealanlari w-full bg-black border border-neutral-700 text-white py-3 rounded-xl text-xs">
+      Yazılım
+    </button>
+
+    <button onclick="this.classList.toggle('bg-green-500')"
+      data-alan="Elektronik"
+      class="filtrealanlari w-full bg-black border border-neutral-700 text-white py-3 rounded-xl text-xs">
+      Elektronik
+    </button>
+
+    <button onclick="this.classList.toggle('bg-green-500')"
+      data-alan="Mekanik"
+      class="filtrealanlari w-full bg-black border border-neutral-700 text-white py-3 rounded-xl text-xs">
+      Mekanik
+    </button>
+
+    <button onclick="filtreuygulama()"
+      class="bg-white text-black px-4 py-1.5 rounded-lg text-xs font-bold">
+       Filtreleri uygula
+    </button>
+
+    </div>
+  <div id="anaSayfa" class="space-y-4">
+    <div class="bg-neutral-900 p-4 rounded-2x1 border border-neutral-800 flex gap-3">
+      <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white shrink-0">Z</div>
+      <div class="w-full sapece-y-2">
+        <textarea placeholder="Proje açıklaması..." rows="2" class="w-full bg-transparent text-xs text-white placeholder-neutral-500 focus:outline-none resize-none></textarea>
+        <input type="text" placeholder="Aranan Beceriler" class=w-full bg-neutral-800/50 border border-neutral-800 rounded-lg p-2 text-xs text-white placeholder-neutral-500 focus:outline-none">
+        <div class="flex justify-end pt-1">
+          <button onclick="this.innerText='Paylaşıldı"; this.style.backgroundColor='green'; this.disabled=true;" class=" bg-white text-black px-4 py-1.5 rounded-lg text-xs font-bold">Paylaş</button>
+        </div>
+      </div>
+    </div>
+    <div
+    class="bg-neutral-900 p-5 rounded-2x1 border border-neutral-800 relative"
+    data-alan="Yazılım>
+      <div>
+  <h4 class="font-bold text-sm leading-none">Zehra</h4>
+  <div class="flex items-center gap-2 mt-1">
+    <span class="text-xs text-neutral-400">@zehra</span>
+    <span class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[10px] px-2 py-0.5 rounded-full font-medium flex items-center gap-1">
+      <svg class="w-2.5 h-2.5 text-indigo-400" fill="currentColor" viewBox="0 0 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      Öne Çıkan
+    </span>
+  </div>
+
+        <div class="absolute top-4 right-4">
+          <button oncilck="document.getElementById('ilanMenu').classList.toggle('hidden')"class="text-neutral-400 hover:text-white p-1">
+            <svg class="w-5 h-5" fill="currentColor" viewBox=
            
-  
+    
 
