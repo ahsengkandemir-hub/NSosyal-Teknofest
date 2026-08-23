@@ -158,7 +158,31 @@
     font-size: 0.9em;
     margin-bottom: 2.5em;
 }
+.t-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    margin-bottom: 1em;
+}
 
+.t-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.t-label {
+    font-size: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--t-text-muted);
+}
+
+.t-value {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--t-text-main);
+}
 
     
     
